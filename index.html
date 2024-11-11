@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сучасна пекарня</title>
+    <title>molfarka</title>
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,8 +57,8 @@
                     <div class="traditions-content">
                         <h2 class="traditions-title section-title">Наш бар</h2>
                         <p class="traditions-text">
-                            <span class="brand uppercase">Мольфарка</span> -бар, де народжується магія напоїв і
-                            зберіг смак традиційних напоїв та натуральності інгредієнтів.
+                            <span class="brand uppercase">Мольфарка</span> - бар, де народжується магія напоїв,
+                            зберігається смак традиційних напоїв та натуральності інгредієнтів.
                         </p>
                         <p class="traditions-text">
                             Ми працюємо як найвідоміший заклад в магічному світі - <span class="brand">5 хвилин і
@@ -192,16 +192,24 @@
             </div>
         </section>
         <section>
-            <div class="feedback-form">
-                <h2>Напишіть своє пророцтво про бар</h2>
+            
+            <h2>Приєднуйтеся до нашого магічного кола ♡</h2>
+            <div class="container-row">
+                <div class="telegram">
+                    <img class="tgfoto" src="./images/tgfoto.png" alt="tgfoto">
+                </div>
 
-                <form action="#" method="post">
-                    <label for="feedback">Пророцтво</label>
-                    <textarea id="feedback" name="feedback" placeholder=" Напишіть Ваше мудре слово" rows="5"
-                        required></textarea>
+                <div class="feedback-form">
+                    <h2>Напишіть своє пророцтво про бар</h2>
+                    <form action="#" method="post">
+                        <label for="feedback"> Ваше мудре слово</label>
+                        <textarea id="feedback" name="feedback" placeholder="" rows="5"
+                            required ></textarea>
 
-                    <button type="submit">Надіслати пророцтво</button>
-                </form>
+                        <button type="submit" class="sendtg-btn">Надіслати пророцтво</button>
+                        <h3 class="feedback-sent"></h3>
+                    </form>
+                </div>
             </div>
         </section>
 
@@ -287,6 +295,9 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    
+    <script src="./js/tg.js"></script>
+    
 </body>
 
 </html>
