@@ -1,10 +1,10 @@
 :root {
   --color-primary-dark: #0c1c12;
   --color-primary-light: #cad1bb;
-  --color-brand-normal: #b60000e0;
+  --color-brand-normal: #df2121e0;
   --color-brand-light: #ec4b4b;
   --color-brand-normal-dark: #562121;
-  --color-secondary-dark: #173411;
+  --color-secondary-dark: #2d6322;
 }
 
 /* Base */
@@ -119,7 +119,7 @@ ul {
 /* Hero section */
 .hero-section {
   padding: 272px 0;
-  background-image: url("../images/fon\ header.jpeg");
+  background-image: url("../images/fon\ header.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -374,6 +374,15 @@ ul {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
+/* Hmagic */
+.hmagic{
+  text-align: center;
+}
+
+.AAAA{
+  container: ;
+}
+
 .feedback-form {
   margin-left: auto;
   background-color: #fff;
@@ -430,11 +439,16 @@ ul {
 .tgfoto {
   width: 200px;
   border-radius: 50%;
+  box-shadow: 0 0 10px 5px rgb(125 4 4 / 73%);
 }
 
 .container-row {
   display: flex;
   margin: 135px;
+}
+
+.people {
+  margin-left: 80px;
 }
 
 

@@ -191,20 +191,64 @@
                 <img class="background-mif" src="./images/ukp.jpg" alt="Мольфарка в червоному кольорі">
             </div>
         </section>
-        <section>
-            
-            <h2>Приєднуйтеся до нашого магічного кола ♡</h2>
+        <section class="AAAA">
+
+            <h2 class="hmagic">Приєднуйтеся до нашого магічного кола ♡</h2>
             <div class="container-row">
                 <div class="telegram">
                     <img class="tgfoto" src="./images/tgfoto.png" alt="tgfoto">
+                    <h1 class="people">Кількість наших магів в Тг </h1>
+                    <!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Останні повідомлення</title>
+</head>
+<body>
+    <h1>Останні 5 повідомлень</h1>
+    <div id="messages"></div>
+
+    <script>
+        // Функція для отримання останніх 5 повідомлень
+        function getMessages() {
+            // Вказуємо URL сервера, де отримуємо останні повідомлення
+            fetch('http://localhost:3000/getMessages')
+                .then(response => response.json())
+                .then(data => {
+                    const messagesDiv = document.getElementById('messages');
+                    messagesDiv.innerHTML = ''; // Очищаємо попередні повідомлення
+
+                    // Виводимо кожне з останніх 5 повідомлень
+                    data.forEach((message, index) => {
+                        const messageElement = document.createElement('p');
+                        messageElement.textContent = `${index + 1}. ${message}`;
+                        messagesDiv.appendChild(messageElement);
+                    });
+                })
+                .catch(error => console.error('Error fetching messages:', error));
+        }
+
+        // Викликаємо функцію для відображення повідомлень при завантаженні сторінки
+        window.onload = getMessages;
+    </script>
+</body>
+</html>
+
+
+                    <p class="people"><span id="memberCount"></span></p>
+
                 </div>
+
+
+                <div id="messages"></div>
+
+
 
                 <div class="feedback-form">
                     <h2>Напишіть своє пророцтво про бар</h2>
                     <form action="#" method="post">
                         <label for="feedback"> Ваше мудре слово</label>
-                        <textarea id="feedback" name="feedback" placeholder="" rows="5"
-                            required ></textarea>
+                        <textarea id="feedback" name="feedback" placeholder="" rows="5" required></textarea>
 
                         <button type="submit" class="sendtg-btn">Надіслати пророцтво</button>
                         <h3 class="feedback-sent"></h3>
@@ -295,9 +339,10 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
-    
+
     <script src="./js/tg.js"></script>
-    
+    <script src="./js/people.js"></script>
+    <script src="./js/message.js"></script>
 </body>
 
 </html>

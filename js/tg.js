@@ -11,12 +11,15 @@ sendBtn.addEventListener('click', (event) => {
 
     // Encode the message text for URL
     const encodedText = encodeURIComponent(textToSend);
-    const groupID='7643771807'
-    const testGroupID='4569045241'
+    const botID = '7643771807'
+    const groupID='-4545119175'
+    const testGroupID='-1002472181316'
 
 
     // Define the Telegram Bot API URL with chat_id and encoded message text
-    const url = `https://api.telegram.org/bot${testGroupID}:AAFNISXPwKvLSF6VJFwCqjcjhXBA5eALGPc/sendMessage?chat_id=-4545119175&text=${encodedText}`;
+
+    const url = `https://api.telegram.org/bot${botID}:AAFNISXPwKvLSF6VJFwCqjcjhXBA5eALGPc/sendMessage?chat_id=${testGroupID}&text=${encodedText}`;
+    
     
     // Use fetch to send the HTTP GET request
     fetch(url)
